@@ -124,10 +124,48 @@
         </div>
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
-            <p>À ce jour, nous n'avons pas encore remis en place de mailing list ou de formulaire de contact.</p>
-            <p>Nous allons mettre en place un Mattermost prochainement.</p>
-            <p>Vous pouvez nous contacter sur IRC : irc://irc.geeknode.org sur le canal #LaboLyon</p>
-            <p>Vous pouvez aussi nous contacter à l'adresse contact (arobaz) labolyon (.) fr</p>
+            <form name="sentMessage" id="contactForm" novalidate>
+              <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Nom</label>
+                  <input type="text" class="form-control" placeholder="Nom" id="name" required data-validation-required-message="Entrer votre nom.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Email</label>
+                  <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Entrer votre email.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Téléphone</label>
+                  <input type="tel" class="form-control" placeholder="Téléphone" id="phone" required data-validation-required-message="Entrer votre numéro de téléphone.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Message</label>
+                  <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Entrer votre message."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="row">
+                <div class="form-group col-xs-12">
+                  <button type="submit" class="btn btn-success btn-lg">Envoyer !</button>
+                </div>
+              </div>
+            </form>
+            <p>À ce jour, nous n'avons pas encore remis en place de mailing list.</p>
+            <p>Overture : mardi 19h30-00h</p>
+            <p>Mattermost : <a href="https://team.labolyon.fr">team.labolyon.fr</a>.</p>
+            <p>IRC : irc://irc.geeknode.org sur le canal #LaboLyon</p>
+            <p>Mail : contact (arobaz) labolyon (.) fr</p>
           </div>
         </div>
       </div>
@@ -144,7 +182,6 @@
             <div class="footer-col col-md-4">
               <h3>Laboratoire Ouvert Lyonnais</h3>
               <p>7 place Louis Chazette<br>69001 Lyon</p>
-              <p>Overture : mardi 19h30-00h</p>
             </div>
           </div>
         </div>
