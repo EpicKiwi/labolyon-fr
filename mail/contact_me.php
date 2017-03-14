@@ -15,11 +15,12 @@ $email_address = $_POST['email'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 
-$to = 'contact@lalis.fr';
+$to = 'contact@labolyon.fr';
 $email_subject = "[Site] Contact de :  $name";
 $email_body = "Vous avez recu un message depuis le formulaire du site.\n\n"."Voici les details :\n\nNom : $name\n\nEmail : $email_address\n\nTelephone : $phone\n\nMessage :\n$message";
 $headers = "From: noreply@labolyon.fr\n";
 $headers .= "Reply-To: $email_address";	
+$headers .= "Date: ".date("r");	
 mail($to,$email_subject,$email_body,$headers);
 return true;
 ?>
