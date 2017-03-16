@@ -19,9 +19,9 @@ $to = 'contact@labolyon.fr';
 $email_subject = "[Site] Contact de :  $name";
 $email_body = "Vous avez recu un message depuis le formulaire du site.\n\n"."Voici les details :\n\nNom : $name\n\nEmail : $email_address\n\nTelephone : $phone\n\nMessage :\n$message";
 $headers = "From: noreply@labolyon.fr\n";
-$headers .= "Reply-To: $email_address";	
-$headers .= "Date: ".date("r");	
-$headers .= "Content-Type: text/html; charset=UTF-8";	
+$headers .= "Reply-To: $email_address\n";
+$headers .= "Date: ".date("r")."\n";
+$headers .= "Content-Type: text/html; charset=UTF-8";
 mail($to,$email_subject,$email_body,$headers);
 return true;
 ?>
