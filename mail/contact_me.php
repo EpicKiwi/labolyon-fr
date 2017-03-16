@@ -21,7 +21,8 @@ $email_body = "Vous avez recu un message depuis le formulaire du site.\n\n"."Voi
 $headers = "From: noreply@labolyon.fr\n";
 $headers .= "Reply-To: $email_address\n";
 $headers .= "Date: ".date("r")."\n";
-$headers .= "Content-Type: text/html; charset=UTF-8";
+$headers .= "Content-Type: text/plain; charset=UTF-8";
+$headers .= "MIME-Version: 1.0\n";
 mail($to,$email_subject,$email_body,$headers);
 return true;
 ?>
