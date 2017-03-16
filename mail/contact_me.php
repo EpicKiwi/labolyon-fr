@@ -1,5 +1,4 @@
 <?php
-mb_internal_encoding("UTF-8");
 // Check for empty fields
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
@@ -22,6 +21,7 @@ $email_body = "Vous avez recu un message depuis le formulaire du site.\n\n"."Voi
 $headers = "From: noreply@labolyon.fr\n";
 $headers .= "Reply-To: $email_address";	
 $headers .= "Date: ".date("r");	
+$headers .= "Content-Type: text/html; charset=UTF-8";	
 mail($to,$email_subject,$email_body,$headers);
 return true;
 ?>
