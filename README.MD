@@ -5,5 +5,5 @@ modifier ou proposé une nouvelle version.
 
 TODO
 ====
-Le formulaire ne fonctionne toujours pas, ça vient de nginx qui n’est pas
-configuré pour interpreter le php pour envoyé le mail.
+* Mailinglist
+* Wiki
