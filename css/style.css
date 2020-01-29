@@ -1,22 +1,214 @@
+/* Global */
+
 body {
-    overflow-x: hidden;
+	font-family: 'arial', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: #8a8683;
+	background-color:#000000;
+}
+img {
+	max-width: 100%;
+}
+a:link {
+	color: yellow;
+	text-decoration: none;
+}
+a:hover {
+	color: white;
+	background-color:black;
+}
+a:visited {
+	color:yellow;
 }
 
-header {
-    text-align: center;
+/* Navigation */
+
+.menu {
+	position:fixed;
+	top:0px;
+	width:100%;
+	height:auto;
+	z-index:100;
+    background-color:black;
+}
+#logo {
+	text-align: left;
+	margin: 10px 0;
+}
+#nav {
+	text-align: right;
+	margin: 30px 0 0 0;
+}
+.navigation{
+	float: right;
+	list-style: none;
+	margin: 0;
+}
+.navigation li{
+	float: left;
+	padding:0 0 0 50px;
+    color:yellow;
+}
+.navigation li:hover{
+	cursor:pointer;
+	color: yellow;
 }
 
-header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+.navigation .active{
+	cursor:pointer;
+	color: yellow;
 }
 
-header img {
-    display: block;
-    margin: 0 auto 20px;
+/* General Slides */
+
+.slide{
+	background-color:rgba(0,0,0,0.7);
+    background-attachment: fixed;
+	width:100%;
+	height:auto;
+	position: relative;
+	top:85px;
 }
 
-header .intro-text .skills {
-    font-size: 1.25em;
-    font-weight: 300;
+#bgvid {
+  position:fixed;
+  width:100%;
+  z-index: -500;
+}
+
+/* Slide 1 */
+
+#slide1{
+}
+#slide1 h1 {
+	font-size: 3.8em;
+	letter-spacing: -3px;
+	line-height: 0px;
+	color:#8a8683;
+	font-weight: 700;
+}
+#slide1 h2 {
+	font-size: 2em;
+	color: #8a8683;
+	line-height: 0px;
+	padding-bottom:20px;
+	font-weight: 400;
+}
+
+.button{
+	color:#fff;
+	background-color:#000;
+	font-family:'arial';
+}
+
+.text{
+        background-color:#fff;
+	font-family:'arial';
+}
+
+.icons{
+	width:100px;
+    float:right;
+}
+
+
+.ecosysteme{
+    width:50px;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+
+#logo {
+	width: 100%;
+	text-align: center;
+}
+
+#nav {
+	width:100%;
+	margin:10px 0;
+}
+
+.navigation{
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.navigation li{
+	float: left;
+	width:25%;
+	padding:0;
+}
+
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	position: relative;
+	padding:140px 0 0 0;
+}
+
+#decorative {
+	display:none;
+}
+
+#content {
+	text-align:center;
+	width:100%;
+}
+
+#slide1 h1 {
+	line-height: 1em;
+}
+#slide1 h2 {
+	line-height: 1em;
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+
+#logo {
+	width: 100%;
+	text-align: center;
+}
+
+#nav {
+	width:100%;
+	margin:5px 0;
+}
+
+.navigation{
+	width: 100%;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.navigation li{
+	float: left;
+	width:25%;
+}
+
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	position: relative;
+	padding:150px 0;
+}
+
+#slide1 h1 {
+	line-height: 1em;
+}
+#slide1 h2 {
+	line-height: 1em;
+}
+
+@media only screen and (max-width: 767px) {
+
+#slide1{
+
+text-align:justify;
 }
