@@ -2,10 +2,10 @@ La dérniere version est sur la branche V2
 
 Laboratoire Ouvert Lyonnais
 ===========================
-Voici le site du lol, nous avons utilisé un thème bootstrap, libre à vous de le
-modifier ou proposé une nouvelle version.
+Vous retrouverez la version en ligne du site du lol, il n'y a pas de bootstrap sur cette version.
+Il a été codé le plus simplement possible.
 
 TODO
 ====
-* Mailinglist
-* Wiki
+Pouvoir mettre en quelques lignes les activités ou ateliers à venir avec une date.  
+Est-ce le git pourrait nous permettre de faire ça ?
