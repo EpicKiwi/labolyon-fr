@@ -3,9 +3,12 @@ html {
 	font-weight: 400;
 	font-size: 1em;
 	color: #8a8683;
-	background-color:#000000;
     max-width: 100%;
     overflow-x: hidden;
+    background: url("../images/world_network.muted.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
 
 body {
@@ -175,7 +178,7 @@ main .toolbar button img[hidden] {
 
 /* background */
 
-#background {
+.fullscreen-background {
     display: block !important;
     position: absolute;
     left: 0;
@@ -183,17 +186,21 @@ main .toolbar button img[hidden] {
     height: 100vh;
     overflow: hidden;
     z-index: -1;
-    opacity: 0.3;
     width: 100%;
+    background: black;
 }
 
-#background img, #background video {
+.fullscreen-background img, .fullscreen-background video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-#background img {
+.fullscreen-background video {
+    opacity: 0.3;
+}
+
+.fullscreen-background img {
     position: absolute;
     top: 0;
     left: 0;
@@ -202,12 +209,12 @@ main .toolbar button img[hidden] {
     transition: linear 1s opacity;
 }
 
-#background img[hidden]{
+.fullscreen-background img[hidden]{
     display: block;
     opacity: 0;
 }
 
-#background::after {
+.fullscreen-background::after {
     content: "";
     width: 100%;
     height: 25vh;
