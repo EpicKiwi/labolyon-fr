@@ -1,83 +1,77 @@
 <!DOCTYPE HTML>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Laboratoire Ouvert Lyonnais</title>
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+
+	<style>
+		#background {
+			display: none;
+		}
+	</style>
+
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 </head>
 
-<video autoplay loop poster="images/world_network.jpg" id="bgvid">
-    <source src="videos/background_sound.mp4" type="video/mp4">
-	</video>
-
 <body>
 
-	<div class="menu">
-		<div class="container clearfix">
-			<div id="logo" class="grid_3">
-				<img src="images/logo_picto.svg">
-			</div>
-			<div id="nav" class="grid_9 omega">
-				<a href="https://git.labolyon.fr/explore/repos ">Wiki/Git</a>
-			</div>
-			<div id="nav" class="grid_9 omega">
-				<a href="iban.pdf">Donations/Cotisations</a>
-			</div>
-		
+	<div id="background">
+		<video src="/videos/background_sound.mp4" loop poster="images/world_network.jpg" autoplay id="background-video" loading="lazy"></video>
+		<img src="/images/world_network.jpg" aria-hidden="true" id="background-poster"/>
+	</div>
+
+	<header id="main-header">
+		<img class="logo" src="images/logo_picto.svg" alt="Laboratoire Ouvert Lyonnais" />
+
+		<nav>
+			<a href="https://git.labolyon.fr/explore/repos ">Wiki/Git</a>
+		</nav>
+	</header>
+
+	<main>
+		<section id="description">
+			<p>Le Laboratoire ouvert lyonnais est un lieu de brassage et une communauté éclectique.
+			Son objectif est le partage des connaissances et la ré-appropriation des technologies.
+			Chacun-e amène son savoir-faire et son envie d'apprendre dans un mélange ludique de création et de convivialité. 
+			Le L.O.L. est l'expression du mouvement global des hackerspaces sur Lyon et
+			se veut ouvert aux échanges, aux collaborations avec d'autres initiatives.</p>
+
+			<p>L'électronique, l'informatique, la mécanique, la chimie, les arts numériques, la cuisine expérimentale sont les pratiques des loliens.
+			Les diverses manières d'implication du collectif dans des multiples initiatives et événements permet à celui-ci, dans le temps, de s'adapter à son écosystème.</p>
+
+			<p>L'une des vocations du LOL est de fournir à ses membres un lieu pour héberger leurs projets ainsi que d'organiser des présentations publiques et des ateliers autonomisants.</p>
+
+			<p>
+				<a href="https://hackerspaces.org/" class="hackerspace-logo"><img class="icons" src="images/logo_hackerspaces_monde.png"></a>
+				<marquee direction="left" behavior="scroll" scrollamount="3">none of us is smarter than all of us - nul n'est plus intelligent-e que nous tou-te-s réunis</marquee>
+			</p>
+		</section>
+
+	   <aside id="main-side">
+			<h2>Informations</h2>
+			<section class="info">
+				<div>Permanence : mardis à partir de 19h00</div>
+				<div>Adresse : <address>7 Place Louis Chazette 69001 Lyon</address></div>				      
+			</section>
+
+			<h2>Canaux</h2>
+			<section>
+				<p>IRC : canal #labolyon sur <a href="http://geeknode.org/">irc.geeknode.org</a> : besoin d'aide sur IRC? <a href=" http://www.irchelp.org">voir IRC Help</a></p>
+				<p><a href=" https://listes.infini.fr/listes.labolyon.fr/subscribe/discussions">Liste de diffusion</a></p>
+			</section>
+		</aside>
+
+
+		<div class="toolbar">
+			<button id="play-background" hidden>
+				<img src="/images/play.svg" alt="Play" class="play" title="Play" />
+				<img src="/images/pause.svg" alt="Pause" class="pause" hidden title="Pause" />
+			</button>
 		</div>
-	</div>
+	</main>
 
-
-	<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
-		<div class="container clearfix">
-			<div id="content" class="grid_7">
-				  <p>
-				     Le Laboratoire ouvert lyonnais est un lieu de brassage et une communauté éclectique.
-                     Son objectif est le partage des connaissances et la ré-appropriation des technologies.
-				     Chacun-e amène son savoir-faire et son envie d'apprendre dans un mélange ludique de création et de convivialité. 
-                     Le L.O.L. est l'expression du mouvement global des hackerspaces sur Lyon et
-				     se veut ouvert aux échanges, aux collaborations avec d'autres initiatives.
-				  </p>
-				  <p>
-				     L'électronique, l'informatique, la mécanique, la chimie, les arts numériques, la cuisine expérimentale sont les pratiques des loliens. Les diverses manières d'implication du collectif dans des multiples initiatives et événements permet à celui-ci, dans le temps, de s'adapter à son écosystème.
-				  </p>
-				  <p>
-                     L'une des vocations du LOL est de fournir à ses membres
-				     un lieu pour héberger leurs projets ainsi que d'organiser des présentations publiques et des ateliers autonomisants.</p>
-				<p><a href="https://hackerspaces.org/"><img class="icons" src="images/logo_hackerspaces_monde.png"></a></p>
-				<marquee direction="left" behavior="scroll" scrollamount="3" style="height:25px;width:400px;background-color:none;font-family:arial;font-size:12pt;color:#ffffff;" >none of us is smarter than all of us - nul n'est plus intelligent-e que nous tou-te-s réunis</marquee>
-			</div>
-			
-			<div id="content" class="grid_5 omega">
-			         <h3>Informations</h3>
-			    <div>
-				   <h4>Permanence : mardis à partir de 19h00</h4>
-				   <h4>Adresse : 7 Place Louis Chazette 69001 Lyon</h4>				      
-			    </div>
-			     <h3>Canaux</h3>
-			     <div>
-				   <p>IRC : canal #labolyon sur <a href="http://geeknode.org/">irc.geeknode.org</a> : besoin d'aide sur IRC? <a href=" http://www.irchelp.org">voir IRC Help</a></p>
-				   <p><a href=" https://listes.infini.fr/listes.labolyon.fr/subscribe/discussions">Liste de diffusion</a></p>
-			    </div>
-			</div>
-		
-		
-		
-              </div>
-	    </div>
-          </div>
-	</div>
-	
-	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
-	<script type="text/javascript" src="js/waypoints.min.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="js/scripts.js"></script>
-	<!-- <script type="text/javascript" src="js/scripts.min.js"></script> -->
+	<script src="js/background.js"></script>
 </body>
 </html>
