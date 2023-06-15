@@ -6,7 +6,7 @@ html {
     max-width: 100%;
     overflow-x: hidden;
     background: url("../images/world_network.muted.jpg");
-    background-color: black;
+    background-color: #000000;
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
