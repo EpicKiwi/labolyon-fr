@@ -1,22 +1,239 @@
-body {
+html {
+	font-family: 'arial', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: #8a8683;
+    max-width: 100%;
     overflow-x: hidden;
+    background: url("../images/world_network.muted.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
 
-header {
-    text-align: center;
+body {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
-header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+/* global items */
+
+img {
+	max-width: 100%;
 }
 
-header img {
+a:link {
+	color: yellow;
+	text-decoration: none;
+}
+
+a:hover {
+	color: white;
+	background-color:black;
+}
+
+a:visited {
+	color:yellow;
+}
+
+/* Header */
+
+#main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+
+    gap: 15px;
+
+    padding: 10px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+#main-header::before {
+    content: "";
+    z-index: -1;
+    width: 100vw;
+    background: black;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#main-header > nav {
+    flex: 1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    #main-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #main-header > nav {
+        justify-content: center;
+    }
+}
+
+/* main area */ 
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-auto-rows: min-content;
+    gap: 5px;
+}
+
+main > section {
+    padding: 0 10px;
+}
+
+main aside {
+    padding: 10px;
+}
+
+main .toolbar {
+    grid-column: 1 / 3;
+    padding: 0 10px;
+
+    text-align: right;
+}
+
+@media screen and (max-width: 889px){
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main > aside {
+        grid-row: 3;
+    }
+
+    main .toolbar {
+        grid-row: 1;
+    }
+}
+
+/* toolbar */
+
+main .toolbar button {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+main .toolbar button img {
+    height: 1em;
+    display: inline-block;
+}
+
+main .toolbar button img[hidden] {
+    display: none;
+}
+
+/* description */
+
+#description {
+    text-align: justify;
+}
+
+#description > *:first-child {
+    margin-top: 0;
+}
+
+.hackerspace-logo {
+    float: right;
+    width: 100px;
+}
+
+#description marquee {
+    height:25px;
+    max-width:400px;
+    background-color:none;
+    font-family:arial;
+    font-size:12pt;
+    color:#ffffff;
+}
+
+/* side */
+
+#main-side h2 {
+    color: white;
+    font-size: 1em;
+}
+
+#main-side address {
+    display: inline;
+}
+
+#main-side .info > * {
+    margin: 1.33em 0;
+    font-weight: bold;
+    color: yellow;
+}
+
+@media screen and (max-width: 889px){
+    #main-side {
+        text-align: center;
+    }
+}
+
+/* background */
+
+.fullscreen-background {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    background: black;
+}
+
+.fullscreen-background img, .fullscreen-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fullscreen-background video {
+    opacity: 0.3;
+}
+
+.fullscreen-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: linear 1s opacity;
+}
+
+.fullscreen-background img[hidden]{
     display: block;
-    margin: 0 auto 20px;
+    opacity: 0;
 }
 
-header .intro-text .skills {
-    font-size: 1.25em;
-    font-weight: 300;
+.fullscreen-background::after {
+    content: "";
+    width: 100%;
+    height: 25vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, black, rgba(0,0,0,0));
 }
