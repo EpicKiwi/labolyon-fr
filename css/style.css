@@ -2,7 +2,7 @@ html {
 	font-family: 'arial', sans-serif;
 	font-weight: 400;
 	font-size: 1em;
-	color: #8a8683;
+	color: #cfcfcf;
     max-width: 100%;
     overflow-x: hidden;
     background: url("../images/world_network.muted.jpg");
@@ -146,11 +146,28 @@ main .toolbar button img[hidden] {
 /* description */
 
 #description {
-    text-align: justify;
+    text-align: left;
+    line-height: 1.5;
 }
 
 #description > *:first-child {
     margin-top: 0;
+}
+
+dl.definitions > * {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+dl.definitions > dt:not(:first-child)::before {
+    content: "";
+    display: block;
+    margin-top: 1em;
+}
+
+dl.definitions > dt {
+    font-weight: bold;
 }
 
 .hackerspace-logo {
