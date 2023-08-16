@@ -17,9 +17,12 @@
 
 <body>
 
-	<div class="fullscreen-background">
-		<video src="/videos/background_sound.mp4" loop poster="images/world_network.jpg" autoplay id="background-video" loading="lazy"></video>
-		<img src="/images/world_network.muted.jpg" aria-hidden="true" id="background-poster"/>
+	<div class="fullscreen-background" aria-hidden="true">
+		<video muted loop poster="images/world_network.jpg" autoplay id="background-video">
+			<source src="videos/background.webm" type="video/webm" />
+			<source src="videos/background.mp4" type="video/mp4">
+		</video>
+		<img src="/images/world_network.muted.jpg" alt="Logo du laboratoire ouvert lyonnais, un rectangle entourant 3 lignes de points et trais des lettres L O L en morse." id="background-poster"/>
 	</div>
 
 	<header id="main-header">
