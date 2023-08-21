@@ -40,13 +40,18 @@ a:visited {
 	color:yellow;
 }
 
+hr {
+    border: none;
+    height: 2em;
+}
+
 /* Header */
 
 #main-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 95px 1fr 400px;
+    grid-template-rows: min-content;
+    align-items: center;
 
     gap: 15px;
 
@@ -55,10 +60,8 @@ a:visited {
     margin-bottom: 25px;
 }
 
-@media screen and (max-width: 600px) {
-    #main-header {
-        justify-content: center;
-    }
+#main-header > * {
+    grid-row: 1;
 }
 
 #main-header h1 {
@@ -67,6 +70,34 @@ a:visited {
     font-weight: normal;
     font-family: monospace;
     color: yellow;
+
+    flex: 1;
+    grid-column: 2;
+}
+
+#main-header nav {
+    grid-column: 3;
+}
+
+@media screen and (max-width: 600px) {
+    #main-header {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: min-content;
+    }
+
+    #main-header img {
+        grid-column: 1;
+        margin-left: auto;
+    }
+
+    #main-header h1 {
+        grid-column: 2;
+    }
+
+    #main-header #main-nav {
+        grid-row: 2;
+        grid-column: 1 / 3;
+    }
 }
 
 /* main area */
@@ -79,11 +110,54 @@ main {
     column-gap: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 15vh;
+}
+
+main #main-info {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+main #events {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+main #description {
+    grid-column: 1;
+    grid-row: 1 / 5;
 }
 
 main .toolbar {
     grid-column: 1 / 3;
     text-align: right;
+}
+
+@media screen and (max-width: 889px){
+    main {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+
+    main #main-info {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    
+    main #events {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    
+    main #description {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    main .toolbar {
+        grid-column: 1;
+        grid-row: 1;
+    }
 }
 
 /* toolbar */
@@ -223,12 +297,11 @@ main > aside {
 
 #main-nav {
     text-align: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
 }
 
 #main-nav > *:not(:last-child)::after {
     content: " | ";
+    content: " | " / "";
     text-decoration: none !important;
 }
 
@@ -256,32 +329,4 @@ main > aside {
 
 .affiche .credits, .affiche .credits * {
     color: inherit;
-}
-
-/* mobile */
-
-@media screen and (max-width: 889px){
-    main {
-        grid-template-columns: 1fr;
-
-        row-gap: 50px;
-    }
-
-    main > aside {
-        grid-row: 3;
-        grid-column: 1;
-    }
-
-    main .toolbar {
-        grid-row: 1;
-        grid-column: 1;
-    }
-
-    #description {
-        grid-column: 1;
-    }
-
-    #events {
-        grid-row: 4;
-    }
 }

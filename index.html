@@ -25,18 +25,25 @@
 			<source src="videos/background.webm" type="video/webm" />
 			<source src="videos/background.mp4" type="video/mp4">
 		</video>
-		<img src="/images/world_network.muted.jpg" alt="Logo du laboratoire ouvert lyonnais, un rectangle entourant 3 lignes de points et trais des lettres L O L en morse." id="background-poster"/>
+		<img src="/images/world_network.muted.jpg" id="background-poster"/>
 	</div>
 
 	<header id="main-header">
-		<img class="logo" src="images/logo_picto.svg" alt="Laboratoire Ouvert Lyonnais" />
+		<img class="logo" src="images/logo_picto.svg" alt="Logo du laboratoire ouvert lyonnais : un rectangle entourant 3 lignes de points et trais des lettres L O L en morse." />
 
 		<h1>Laboratoire <br/>Ouvert <br/>Lyonnais</h1>
+
+		<nav id="main-nav">
+			<a href="https://git.labolyon.fr/explore/repos ">Dépots Git</a>
+			<a href="https://team.labolyon.fr/">Wiki</a>
+			<a href="https://listes.infini.fr/listes.labolyon.fr/subscribe/discussions">Liste de diffusion</a>
+		</nav>
 	</header>
 
 	<main>
+		
+		<section id="description">
 
-		<section id="definitions">
 			<dl class="definitions">
 				<dt>Hackerspace</dt>
 				<dd><em>n.m.</em> : Tiers lieu de réunion et de rencontre entre personnes désirant comprendre, créer ou détourner des objets techniques ou technologiques.</dd>
@@ -44,26 +51,9 @@
 				<dt>Hackeuse, Hacker</dt>
 				<dd><em>n.</em> : Personne ayant un intérêt dans la technique ou la technologie et faisant un usage creatif et/ou utile de celle-ci par le détournement.</dd>
 			</dl>
-		</section>
 
-		<aside>
-			<section id="main-info">
-				<address><a href="geo:45.7732495,4.8372366">
-					7 Place Louis Chazette 69001 Lyon<br/>
-					45° 46' 23.698" N 4° 50' 14.052" E 
-				</a></address>
-				<p> Ouvert tous les mardis à partir de 19h <br/>
-					et tous les samedis de 14h à 19h</p>			      
-			</section>
+			<hr>
 
-			<nav id="main-nav">
-				<a href="https://git.labolyon.fr/explore/repos ">Dépots Git</a>
-				<a href="https://team.labolyon.fr/">Wiki</a>
-				<a href="https://listes.infini.fr/listes.labolyon.fr/subscribe/discussions">Liste de diffusion</a>
-			</nav>
-		</aside>
-
-		<section id="description">
 			<p>Le Laboratoire Ouvert Lyonnais (LOL) est un lieu de rassemblement et d'expérimentations pour tout les passionné·es d'informatique, d'électronique et de technique.
 			Le LOL est un lieu d'exploration des alternatives et de bidouille.</p>
 
@@ -78,6 +68,15 @@
 				<marquee direction="left" behavior="scroll" scrollamount="3">none of us is smarter than all of us - nul n'est plus intelligent·e que nous tou·tes réunis</marquee>
 			</p>
 		</section>
+
+		<aside id="main-info">
+			<address><a href="geo:45.7732495,4.8372366">
+				7 Place Louis Chazette 69001 Lyon<br/>
+				45° 46' 23.698" N 4° 50' 14.052" E 
+			</a></address>
+			<p> Ouvert tous les mardis à partir de 19h <br/>
+				et tous les samedis de 14h à 19h</p>	
+		</aside>
 
 		<section id="events">
 
@@ -94,7 +93,7 @@
 			</article>
 
 			<article class="event affiche-cafe affiche">
-				<h1 lang="en"><span aria-hidden="true">&gt;</span>Hacking cafe<span class="cursor" aria-hidden="true">▁</span></h1>
+				<h1 lang="en"><span aria-hidden="true">&gt;&nbsp;</span>Hacking cafe<span class="cursor" aria-hidden="true">▁</span></h1>
 
 				<p> Le Samedi apres-midi<br/>
 					Un <abbr title="Le terme café exprime ici toute boisson agréable à deguster en compagnie d'autre personnes. Cela regroupe le café, le thé, des jus de fruits ou autre chose.">café</abbr> sur la table de soudage ou à coté du PC</p>
