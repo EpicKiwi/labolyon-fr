@@ -5,7 +5,7 @@
 }
 
 .affiche-perm {
-    background: black url("../../images/affiches/perm-bg.svg");
+    background: black url("../../images/affiches/perm-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -22,7 +22,7 @@
     font-size: 1.8em;
     margin-top: 50px;
     font-weight: normal;
-    font-family: "Arvo";
+    font-family: "Arvo", sans-serif;
 }
 
 .affiche-perm .event-hours {
