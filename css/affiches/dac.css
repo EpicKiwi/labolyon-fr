@@ -1,0 +1,5 @@
+.affiche-dac img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: scale-down;
+}
