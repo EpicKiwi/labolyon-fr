@@ -13,56 +13,103 @@
 	</style>
 
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+
+	<link rel="stylesheet" href="css/affiches/perm.css">
 </head>
 
 <body>
 
-	<div class="fullscreen-background">
-		<video src="/videos/background_sound.mp4" loop poster="images/world_network.jpg" autoplay id="background-video" loading="lazy"></video>
-		<img src="/images/world_network.muted.jpg" aria-hidden="true" id="background-poster"/>
+	<div class="fullscreen-background" aria-hidden="true">
+		<video muted loop poster="images/world_network.jpg" id="background-video">
+			<source src="videos/background.webm" type="video/webm" />
+			<source src="videos/background.mp4" type="video/mp4">
+		</video>
+		<img src="/images/world_network.muted.jpg" id="background-poster"/>
 	</div>
 
 	<header id="main-header">
-		<img class="logo" src="images/logo_picto.svg" alt="Laboratoire Ouvert Lyonnais" />
+		<img class="logo" src="images/logo_picto.svg" alt="Logo du laboratoire ouvert lyonnais : un rectangle entourant 3 lignes de points et trais des lettres L O L en morse." />
 
-		<nav>
-			<a href="https://git.labolyon.fr/explore/repos ">Wiki/Git</a>
+		<h1>Laboratoire <br/>Ouvert <br/>Lyonnais</h1>
+
+		<nav id="main-nav">
+			<a href="https://git.labolyon.fr/explore/repos ">Dépots Git</a>
+			<a href="https://team.labolyon.fr/">Wiki</a>
+			<a href="https://listes.infini.fr/listes.labolyon.fr/subscribe/discussions">Liste de diffusion</a>
 		</nav>
 	</header>
 
 	<main>
+		
 		<section id="description">
-			<p>Le Laboratoire ouvert lyonnais est un lieu de brassage et une communauté éclectique.
-			Son objectif est le partage des connaissances et la ré-appropriation des technologies.
-			Chacun-e amène son savoir-faire et son envie d'apprendre dans un mélange ludique de création et de convivialité. 
-			Le L.O.L. est l'expression du mouvement global des hackerspaces sur Lyon et
-			se veut ouvert aux échanges, aux collaborations avec d'autres initiatives.</p>
 
-			<p>L'électronique, l'informatique, la mécanique, la chimie, les arts numériques, la cuisine expérimentale sont les pratiques des loliens.
-			Les diverses manières d'implication du collectif dans des multiples initiatives et événements permet à celui-ci, dans le temps, de s'adapter à son écosystème.</p>
+			<dl class="definitions">
+				<dt>Hackerspace</dt>
+				<dd><em>n.m.</em> : Tiers lieu de réunion et de rencontre entre personnes désirant comprendre, créer ou détourner des objets techniques ou technologiques.</dd>
 
-			<p>L'une des vocations du LOL est de fournir à ses membres un lieu pour héberger leurs projets ainsi que d'organiser des présentations publiques et des ateliers autonomisants.</p>
+				<dt>Hackeuse, Hacker</dt>
+				<dd><em>n.</em> : Personne ayant un intérêt dans la technique ou la technologie et faisant un usage creatif et/ou utile de celle-ci par le détournement.</dd>
+			</dl>
+
+			<hr>
+
+			<p>Le Laboratoire Ouvert Lyonnais (LOL) est un lieu de rassemblement et d'expérimentations pour tout les passionné·es d'informatique, d'électronique et de technique.
+			Le LOL est un lieu d'exploration des alternatives et de bidouille.</p>
+
+			<p>Au LOL, nous expérimentons et créons autours du détournement, de la réutilisations d'objets en tout genre.
+			Nous constituons une communautée ouverte où chacun·e peux apprendre et partager avec les autres pour créer ensemble et comprendre les outils techniques qui nous entourent.</p>
+
+			<p>Nous revendiquons l'ouverture du code et des techniques.
+			Le partage des connaissances et l'autogestion.</p>
 
 			<p>
-				<a href="https://hackerspaces.org/" class="hackerspace-logo"><img class="icons" src="images/logo_hackerspaces_monde.png"></a>
-				<marquee direction="left" behavior="scroll" scrollamount="3">none of us is smarter than all of us - nul n'est plus intelligent-e que nous tou-te-s réunis</marquee>
+				<a href="https://www.hackerspaces.org/" class="hackerspace-logo" target="_blank"><img class="icons" src="images/logo_hackerspaces_monde.png" alt="Hackerspaces.org"></a>
+				<marquee direction="left" behavior="scroll" scrollamount="3">none of us is smarter than all of us - nul n'est plus intelligent·e que nous tou·tes réunis</marquee>
 			</p>
 		</section>
 
-	   <aside id="main-side">
-			<h2>Informations</h2>
-			<section class="info">
-				<div>Permanence : mardis à partir de 19h00</div>
-				<div>Adresse : <address>7 Place Louis Chazette 69001 Lyon</address></div>				      
-			</section>
-
-			<h2>Canaux</h2>
-			<section>
-				<p>IRC : canal #labolyon sur <a href="http://geeknode.org/">irc.geeknode.org</a> : besoin d'aide sur IRC? <a href=" http://www.irchelp.org">voir IRC Help</a></p>
-				<p><a href=" https://listes.infini.fr/listes.labolyon.fr/subscribe/discussions">Liste de diffusion</a></p>
-			</section>
+		<aside id="main-info">
+			<address><a href="geo:45.7732495,4.8372366">
+				7 Place Louis Chazette 69001 Lyon<br/>
+				45° 46' 23.698" N 4° 50' 14.052" E 
+			</a></address>
+			<p> Ouvert tous les mardis à partir de 19h <br/>
+				et tous les samedis de 14h à 19h</p>	
 		</aside>
 
+		<section id="events">
+
+			<!--<article class="event affiche-dac affiche">
+				<img src="images/affiches/dac.png" alt="La Digital Audio Community se donne rendez-vous le mercredi 13 septembre à partir de 18h30 au LOL, 7 place Louis Chazette. Au Programme : Ateliers Livre-Coding, Discussions Informatique Musicale && Découverte Code Créatif............" />
+			</article>-->
+
+			<article class="event affiche-perm affiche">
+				<h1>Permanence du LOL</h1>
+				
+				<p>Venez nous rencontrer autours d'une pizza</p>
+
+				<p>On parle technique mais aussi logiciel libre, hacking, de nos projets personnels ou collectifs</p>
+				<p class="event-hours"><strong>Tous les mardis à partir de&nbsp;19h <br/>
+					au local du LOL</strong></p>
+
+				<p>Adhésion 5€ pour le mois</p>
+			</article>
+
+			<!--<article class="event affiche-cafe affiche">
+				<h1 lang="en"><span aria-hidden="true">&gt;&nbsp;</span>Hacking cafe<span class="cursor" aria-hidden="true">▁</span></h1>
+
+				<p> Le Samedi apres-midi<br/>
+					Un <abbr title="Le terme café exprime ici toute boisson agréable à deguster en compagnie d'autre personnes. Cela regroupe le café, le thé, des jus de fruits ou autre chose.">café</abbr> sur la table de soudage ou à coté du PC</p>
+
+				<p> C'est le moment de se mettre ensemble sur nos projets personnels ou collectifs</p>
+
+				<p class="event-hours"><strong>Tous les samedis de&nbsp;14h à 19h <br/>
+					au local du LOL</strong></p>
+
+				<p>Adhésion 5€ pour le mois</p>
+			</article> -->
+
+		</section>
 
 		<div class="toolbar">
 			<button id="play-background" hidden>

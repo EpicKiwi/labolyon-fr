@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Arvo";
+    src: url("./Arvo-Bold.ttf");
+    font-weight: bold;
+}
+
+.affiche-perm {
+    background: black url("../../images/affiches/perm-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-align: center;
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.affiche-perm h1 {
+    font-size: 1.8em;
+    margin-top: 50px;
+    font-weight: normal;
+    font-family: "Arvo", sans-serif;
+}
+
+.affiche-perm .event-hours {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    font-family: "Arvo";
+}
