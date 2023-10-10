@@ -1,5 +1,57 @@
-.affiche-dac img {
-    width: 100%;
-    max-height: 50vh;
-    object-fit: scale-down;
+@font-face {
+    font-family: "Pixelify Sans";
+    src: url("./PixelifySans-Regular.ttf");
+}
+
+.affiche-dac {
+    background-color: transparent;
+    border: none;
+    background-image: url("/images/affiches/dac-background.png");
+    border-color: white;
+    font-family: "Pixelify Sans", monospace;
+
+    background-size: 550px;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    color: #1bff8d;
+    line-height: 1.5;
+}
+
+.affiche-dac .content {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 880px) {
+    .affiche-dac {
+        padding-bottom: 200px;
+    }
+}
+
+.affiche-dac .notes {
+    float: right;
+    margin: 10px;
+}
+
+.affiche-dac em {
+    color: #ebff00;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.affiche-dac strong {
+    text-decoration-color: #00ffff;
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-style: dotted;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.affiche-dac p {
+    margin: 0;
+    margin-bottom: 10px;
 }
